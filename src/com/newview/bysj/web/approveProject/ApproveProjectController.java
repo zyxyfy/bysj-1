@@ -5,7 +5,6 @@ import com.newview.bysj.domain.GraduateProject;
 import com.newview.bysj.domain.Tutor;
 import com.newview.bysj.helper.CommonHelper;
 import com.newview.bysj.web.baseController.BaseController;
-import org.apache.log4j.Logger;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -26,6 +25,7 @@ import java.util.HashMap;
 public class ApproveProjectController extends BaseController {
 
     //private static final Logger logger = Logger.getLogger(ApproveProjectController.class);
+
 
     /**
      * 根据老师的名字和题目名称来获取课题
