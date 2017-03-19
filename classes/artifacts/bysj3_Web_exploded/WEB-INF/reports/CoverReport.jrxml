@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9f9e295a-215e-4a31-98af-490270276679">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1535"/>
+	<field name="title" class="java.lang.String"/>
+	<field name="subTitle" class="java.lang.String"/>
+	<field name="studentClass" class="java.lang.String"/>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="studentNo" class="java.lang.String"/>
+	<field name="tutorName" class="java.lang.String"/>
+	<field name="tutorCheif" class="java.lang.String"/>
+	<field name="head_1" class="java.lang.String"/>
+	<field name="head_2" class="java.lang.String"/>
+	<title>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="51" y="43" width="446" height="53" uuid="2999c0d6-5be3-40ef-b0ac-f24f49e7453c"/>
+				<textElement textAlignment="Center">
+					<font fontName="黑体" size="26" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[山东建筑大学管理学院]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="567" width="83" height="22" uuid="bdf6e2ed-6ea7-44f2-b8b6-cdc049fb7246"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[学生姓名]]></text>
+			</staticText>
+			<line>
+				<reportElement x="168" y="637" width="355" height="1" uuid="73b7b1fd-deb8-4658-9b18-a9bd4602cfa8"/>
+			</line>
+			<textField>
+				<reportElement x="326" y="568" width="185" height="22" uuid="0515890f-f4e7-45e6-bfa8-22b713b86d92"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="406" width="120" height="22" uuid="ceabc29c-4291-4bbc-963e-7c966edf85fc"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[设计中文题目]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="516" width="83" height="22" uuid="5a2cb84a-3018-4770-a0a7-70b9455c5d82"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[专       业]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="617" width="182" height="22" uuid="c472ab70-9620-4ac4-896c-8df4af6cebd6"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[指导教师姓名、职称]]></text>
+			</staticText>
+			<line>
+				<reportElement x="94" y="588" width="173" height="1" uuid="5cc0b1c0-0bf2-4395-bf73-c23f139720db"/>
+			</line>
+			<line>
+				<reportElement x="307" y="589" width="216" height="1" uuid="32b480b5-ca68-4a0d-8b02-ec0599700d73"/>
+			</line>
+			<textField>
+				<reportElement x="140" y="407" width="373" height="22" uuid="f7124f96-5eea-465f-bbaf-216f34d96832"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="516" width="376" height="22" uuid="bafb580f-fb79-47cd-a8b2-befa6df20196"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentClass}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="30" y="487" width="493" height="1" uuid="b4a27666-8f55-4b06-9bb3-7a53b60d7cb2"/>
+			</line>
+			<staticText>
+				<reportElement x="271" y="568" width="52" height="22" uuid="133951ee-2b58-44d9-a81c-5ca15411b761"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[学  号]]></text>
+			</staticText>
+			<line>
+				<reportElement x="94" y="537" width="429" height="1" uuid="cde281df-3879-4b8e-977c-30c101a1e135"/>
+			</line>
+			<textField>
+				<reportElement x="202" y="617" width="144" height="22" uuid="e6b173c2-59f0-423b-83b7-71fe6dc61009"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tutorName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="454" width="473" height="24" uuid="bcec353f-ecf0-44d1-b7bf-405dcb9eb4c6"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="617" width="144" height="22" uuid="c87ad47b-05f7-4419-b528-bece41fce234"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tutorCheif}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="120" y="428" width="403" height="1" uuid="8d972804-4030-4310-83ce-17743556de08"/>
+			</line>
+			<textField>
+				<reportElement x="140" y="568" width="132" height="22" uuid="7b11206d-a061-416c-8217-ed85418048b2"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="656" width="84" height="24" uuid="8aee23c4-c654-44fd-be01-0877d4ac3efb"/>
+				<textElement textAlignment="Center">
+					<font fontName="黑体" size="16" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 目   录]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="705" width="872" height="97" uuid="93bc26d4-b886-4b0a-ab45-e2c079cf5e5b"/>
+				<textElement>
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[毕业设计任务指导书................................................................................................................................1
+毕业设计工作进程表................................................................................................................................
+毕业设计指导记录表................................................................................................................................
+外文译文.....................................................................................................................................................
+译文原文.....................................................................................................................................................
+]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="639" width="100" height="1" uuid="49537560-725f-442e-901e-a39deb43395b"/>
+			</break>
+			<textField>
+				<reportElement x="51" y="102" width="446" height="56" uuid="79023298-9bae-43e1-ab6b-9f417c3cf485"/>
+				<textElement textAlignment="Center">
+					<font fontName="黑体" size="26" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{head_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="113" y="78" width="324" height="51" uuid="98bbb92a-a1e5-4df3-a172-5920e27949f6"/>
+				<textElement textAlignment="Center">
+					<font fontName="黑体" size="24" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[山东建筑大学管理学院]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="196" y="719" width="144" height="22" uuid="f6e47b37-700e-48f3-93c8-744b84341d55"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tutorName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="508" width="120" height="22" uuid="a02b0d05-da5c-4504-b51b-977124e07551"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[设计中文题目]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="334" y="719" width="144" height="22" uuid="004dc0e9-71b2-4e91-a85e-595e405e2804"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tutorCheif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="618" width="376" height="22" uuid="531653c0-4e22-464f-b8d4-5fa94e370f8a"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentClass}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="618" width="83" height="22" uuid="197d2d34-3c3f-463f-925d-1120d0441a1a"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[专       业]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="509" width="373" height="22" uuid="6b8f959a-8348-425d-8e50-3a50dc49b07a"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="168" y="739" width="355" height="1" uuid="0456fd2c-5a9a-4b33-b6bc-b7582d9f8fde"/>
+			</line>
+			<textField>
+				<reportElement x="139" y="670" width="132" height="22" uuid="e3fa42d8-e60f-4662-8026-064afc7ff5ff"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="94" y="690" width="173" height="1" uuid="65fa7cf7-8c03-4f42-ae84-ce2a5489e863"/>
+			</line>
+			<line>
+				<reportElement x="30" y="586" width="493" height="1" uuid="e1d087ce-ed90-44c0-b147-d7757b559e7e"/>
+			</line>
+			<textField>
+				<reportElement x="328" y="670" width="185" height="22" uuid="36670a01-e17d-4136-8582-b1c1638eaf3d"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="719" width="182" height="22" uuid="700846f2-4474-4564-9cc8-b2a366dd8ef5"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[指导教师姓名、职称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="669" width="83" height="22" uuid="3fdf0e78-a110-4e1b-9d27-5fa58c67ee11"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[学生姓名]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="194" y="565" width="339" height="24" uuid="ee8dfc03-08a4-4e84-b394-af4aebed7ac6"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subTitle}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="259" y="670" width="52" height="22" uuid="6e94c4cd-f435-4c85-bb6a-35768f5366e2"/>
+				<textElement>
+					<font size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[学  号]]></text>
+			</staticText>
+			<line>
+				<reportElement x="94" y="639" width="429" height="1" uuid="c67129b2-c36c-4632-ad25-1d979a3deef9"/>
+			</line>
+			<line>
+				<reportElement x="120" y="530" width="403" height="1" uuid="d12356bf-2bda-4b47-9b75-67e2fd95c5f8"/>
+			</line>
+			<line>
+				<reportElement x="307" y="691" width="216" height="1" uuid="2728d792-8860-4a82-b2cc-52c6d99e95a4"/>
+			</line>
+			<textField>
+				<reportElement x="68" y="154" width="421" height="47" uuid="3e20f505-bd1a-45c6-84b2-326fa71d989f"/>
+				<textElement textAlignment="Center">
+					<font fontName="黑体" size="28" isBold="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{head_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="802">
+			<staticText>
+				<reportElement x="240" y="49" width="81" height="23" uuid="bbd810a8-fadc-4dd1-9004-a51da315f039"/>
+				<textElement>
+					<font fontName="黑体" size="16" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 目   录]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="125" width="1119" height="217" uuid="7d0df179-0aaf-4ada-bab6-0d4637eeddec"/>
+				<textElement>
+					<font fontName="宋体" size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<text><![CDATA[
+1.指导教师评审表...............................................................................1
+2.评阅人评审表.........................................................
+3.答辩小组提问录.......................................................
+4.答辩小组意见表.......................................................
+5.毕业设计（论文）成绩评分表...........................................
+]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

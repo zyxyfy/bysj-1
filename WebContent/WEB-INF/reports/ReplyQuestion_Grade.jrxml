@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReplyGroupReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4c863bc9-37e5-4f5b-8ce9-efd5a6215608">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="34"/>
+	<property name="ireport.y" value="567"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="completenessScore" class="java.lang.Double">
+		<fieldDescription><![CDATA[completenessScore]]></fieldDescription>
+	</field>
+	<field name="correctnessScore" class="java.lang.Double">
+		<fieldDescription><![CDATA[correctnessScore]]></fieldDescription>
+	</field>
+	<field name="day" class="java.lang.Integer">
+		<fieldDescription><![CDATA[day]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.Integer">
+		<fieldDescription><![CDATA[month]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="number" class="java.lang.String">
+		<fieldDescription><![CDATA[number]]></fieldDescription>
+	</field>
+	<field name="qualityScoreOfCommentByGroup" class="java.lang.Double">
+		<fieldDescription><![CDATA[qualityScoreOfCommentByGroup]]></fieldDescription>
+	</field>
+	<field name="remarkCommentByGroup" class="java.lang.String">
+		<fieldDescription><![CDATA[remarkCommentByGroup]]></fieldDescription>
+	</field>
+	<field name="replyScore" class="java.lang.Double">
+		<fieldDescription><![CDATA[replyScore]]></fieldDescription>
+	</field>
+	<field name="signature_1" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_1]]></fieldDescription>
+	</field>
+	<field name="signature_2" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_2]]></fieldDescription>
+	</field>
+	<field name="signature_3" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_3]]></fieldDescription>
+	</field>
+	<field name="signature_4" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_4]]></fieldDescription>
+	</field>
+	<field name="signature_5" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_5]]></fieldDescription>
+	</field>
+	<field name="signature_6" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_6]]></fieldDescription>
+	</field>
+	<field name="signature_txt_1" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_txt_1]]></fieldDescription>
+	</field>
+	<field name="signature_txt_2" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_txt_2]]></fieldDescription>
+	</field>
+	<field name="signature_txt_3" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_txt_3]]></fieldDescription>
+	</field>
+	<field name="signature_txt_4" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_txt_4]]></fieldDescription>
+	</field>
+	<field name="signature_txt_5" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_txt_5]]></fieldDescription>
+	</field>
+	<field name="signature_txt_6" class="java.lang.String">
+		<fieldDescription><![CDATA[signature_txt_6]]></fieldDescription>
+	</field>
+	<field name="studentClass" class="java.lang.String">
+		<fieldDescription><![CDATA[studentClass]]></fieldDescription>
+	</field>
+	<field name="subTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[subTitle]]></fieldDescription>
+	</field>
+	<field name="title" class="java.lang.String">
+		<fieldDescription><![CDATA[title]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.Integer">
+		<fieldDescription><![CDATA[year]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="3" width="100" height="20" uuid="ab68f218-aa26-482d-b85c-20b66d48dd03"/>
+				<textElement>
+					<font fontName="宋体" size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[附表11：]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="773" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="16" y="531" width="522" height="222" uuid="9a030bfd-08fa-42da-b59f-21491679b577"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="16" y="441" width="174" height="45" uuid="ca866604-6f6c-4737-8629-76b77aa3ebd7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="281" y="486" width="166" height="45" uuid="b2efb678-a81e-4777-91de-f3a0a5098a9f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="16" y="486" width="174" height="45" uuid="76a934b2-30e4-43c7-b9db-28460bd72d84"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="281" y="441" width="166" height="45" uuid="ddb7f21f-e48a-4355-8e4d-40b909d8af38"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="190" y="441" width="91" height="45" uuid="16b20571-a179-4f3f-b6f2-b12097de9c56"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="190" y="486" width="91" height="45" uuid="6e93a1de-84cd-44cf-a98a-d93dcbdd62db"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="441" width="91" height="45" uuid="ddac1901-cfcf-4ce4-9cda-98a64b889951"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="486" width="91" height="45" uuid="2a63e027-4294-4a06-bcf9-7c6f95a0bbd9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="31" y="448" width="145" height="33" uuid="da44da96-1ccc-4e9f-a83a-0ea529b59e7d"/>
+				<textElement>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[完成任务书规定的要求与水平评分（0-10分）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="491" width="145" height="35" uuid="d63813a4-e7e4-4af9-8252-6efb15cc7d41"/>
+				<textElement>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[论文内容的答辩陈述评分（0-10分）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="448" width="145" height="33" uuid="cd38a195-317f-401d-ba76-bfe290314b20"/>
+				<textElement>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[论文与实物的质量评分（0-10分）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="491" width="145" height="35" uuid="b5f4c8e5-de85-451e-bb7f-dfae4cdfd703"/>
+				<textElement>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[回答问题的正确性评分（0-10分）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="549" width="100" height="20" uuid="274ed86f-699d-4f37-b59a-4dc2a219b841"/>
+				<textElement>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[答辩小组意见：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="44" y="581" width="473" height="96" uuid="bb591f4c-906e-431f-9d17-fc3143ba9df2"/>
+				<textElement>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{remarkByGroupTutor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="75" width="100" height="18" uuid="1e6a5d8a-058f-4534-9a82-0fc8a02082f1"/>
+				<textElement>
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="75" width="137" height="18" uuid="895f2734-6869-4ccd-8b2d-140402c62b7e"/>
+				<textElement>
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentClass}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="395" y="95" width="143" height="1" uuid="a7ea2987-c879-49fa-ba29-2fdb50732563"/>
+			</line>
+			<staticText>
+				<reportElement x="356" y="75" width="57" height="19" uuid="d8f856c7-66e3-4e5c-aec0-8b3021d7fbba"/>
+				<textElement>
+					<font fontName="宋体" size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[班级：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="75" width="100" height="18" uuid="db47aae0-6d0e-4a08-ada3-ab91ee93a140"/>
+				<textElement>
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sutdentNo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="60" y="93" width="89" height="1" uuid="aec62875-760d-4b69-b252-1e9e8cdfde47"/>
+			</line>
+			<textField>
+				<reportElement x="92" y="40" width="162" height="19" uuid="aebf42dc-5a15-4b76-b71f-65facc34a6b6"/>
+				<textElement>
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{school}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="87" y="57" width="162" height="1" uuid="0919f55d-45b4-479f-ba61-fc0f3d1735ac"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="40" width="72" height="17" uuid="a521cfa7-92d2-40a5-bfbc-2c9e0aa7faf4"/>
+				<textElement>
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[院（部）：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="75" width="58" height="19" uuid="7daf98ba-c8ca-412d-962e-456d77a543fc"/>
+				<textElement>
+					<font fontName="宋体" size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<line>
+				<reportElement x="230" y="94" width="100" height="1" uuid="30c51a02-4a8a-4fca-bea4-bab59c38879c"/>
+			</line>
+			<staticText>
+				<reportElement x="190" y="75" width="100" height="19" uuid="57e6f313-f932-41b1-9901-503ee35c7827"/>
+				<textElement>
+					<font fontName="宋体" size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[学号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="2" width="507" height="24" uuid="f79672c1-6b57-424d-a7be-c5b9436153f1"/>
+				<textElement textAlignment="Center">
+					<font fontName="黑体" size="16" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[山东建筑大学毕业设计(论文)答辩提问及成绩汇总表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="40" width="42" height="20" uuid="7e33ee87-5239-4c3f-9e89-af1c791703d3"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[专业：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="40" width="100" height="20" uuid="a2383082-7cf0-4c58-aaff-faa5a3d6657f"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{major}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="323" y="57" width="215" height="1" uuid="34265f42-9807-41a1-b89e-c42889f18711"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="114" width="129" height="20" uuid="2ddf9e60-b86b-4c5d-97de-062d678a6332"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[设计(论文)题目：]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="133" width="418" height="1" uuid="48a2d705-4f29-4e26-9602-56bfdcf48281"/>
+			</line>
+			<textField>
+				<reportElement x="120" y="114" width="100" height="20" uuid="c47861ff-c8b5-4f07-8a30-c8d21b0710f7"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="16" y="149" width="62" height="23" uuid="7582ab1f-68f4-44b7-b47f-81440c2d3e57"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="78" y="149" width="216" height="23" uuid="b2a77fd6-5145-4951-922c-88396c0d9779"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="294" y="149" width="244" height="23" uuid="717c1553-403b-4bf7-8b1a-af07049afdf0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="16" y="172" width="62" height="269" uuid="ea5917fe-5301-4c36-a007-79f11e19c369"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="78" y="172" width="216" height="269" uuid="3df17080-2391-4464-b0cc-4323458f31d7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="294" y="172" width="244" height="269" uuid="c69eb891-35b8-4085-b158-0e14e0e253da"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="16" y="149" width="62" height="23" uuid="c2e38638-a728-40fe-8d3d-314429489250"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[序号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="149" width="216" height="23" uuid="622e8dfb-0511-4c8d-809c-91ede414752c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[提问主要内容]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="149" width="243" height="23" uuid="1a4f89d7-12f0-4fb5-888d-080997da0eed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[对答辩学生回答问题的评语]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="172" width="62" height="86" uuid="678fe428-16c1-48bb-b2fb-2d1e899237b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[问题一]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="258" width="62" height="92" uuid="869ffe73-8a31-43d4-9d00-05b9eaa96460"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[问题二]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="350" width="62" height="91" uuid="287c47c0-7453-4766-b79f-6d8929b4dff6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[问题三]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="78" y="172" width="216" height="86" uuid="4ba952ab-71c8-4746-b358-8b23e8b10322"/>
+				<textFieldExpression><![CDATA[$F{questionByTutor_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="258" width="216" height="92" uuid="8c191cad-8c5b-4b1a-81e1-f665d79eb962"/>
+				<textFieldExpression><![CDATA[$F{questionByTutor_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="350" width="216" height="91" uuid="36a59845-a314-4ddd-ad3f-4fc2e8e16b12"/>
+				<textFieldExpression><![CDATA[$F{questionByTutor_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="294" y="172" width="244" height="86" uuid="bed014fe-82b4-451a-b912-cce48b8df32e"/>
+				<textFieldExpression><![CDATA[$F{responseRemarkByTutor_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="258" width="243" height="92" uuid="e3893495-905d-4b66-b5fa-3e511f189b90"/>
+				<textFieldExpression><![CDATA[$F{responseRemarkByTutor_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="350" width="243" height="91" uuid="25563ded-9ed6-4bcf-8e3e-61fc24e74709"/>
+				<textFieldExpression><![CDATA[$F{responseRemarkByTutor_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="339" y="687" width="100" height="20" uuid="6739a64f-2551-4dee-9fb4-eebbf4176b8e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[评阅人签字：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="417" y="687" width="100" height="20" uuid="9c6eb20e-c26a-4a54-889f-4c5b37272fbc"/>
+				<textFieldExpression><![CDATA[$F{signature}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="417" y="687" width="100" height="36" uuid="e9454670-9523-48dc-a8f8-77ff8a95c507"/>
+			</image>
+			<textField>
+				<reportElement x="347" y="723" width="100" height="20" uuid="6c5d69cb-f04c-4b34-b181-5ce744386849"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="395" y="723" width="100" height="20" uuid="25fb32aa-36be-4044-8ec2-0a36e69575d4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[年]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="413" y="723" width="100" height="20" uuid="c826effc-04c2-418d-ad74-8be61680b127"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="455" y="723" width="100" height="20" uuid="9d621a0b-88a2-4f97-9eda-8877936c13ef"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[月]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="470" y="723" width="100" height="20" uuid="b267212b-b646-4b1e-b84d-28551e856ac0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{day}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="513" y="723" width="100" height="20" uuid="f81d0385-023c-4437-bedc-0f53186e8030"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="114" width="100" height="20" uuid="b590d247-f554-4fba-9f2e-6733203158d3"/>
+				<text><![CDATA[----]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="181" y="114" width="100" height="20" uuid="7d3b2adc-4d01-4ad5-9681-4bd6129289a3"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="441" width="91" height="45" uuid="dde6c7be-de9f-4f2c-b404-b76e37af2cd2"/>
+				<textFieldExpression><![CDATA[$F{qualityScoreByGroupTutor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="441" width="91" height="46" uuid="d497f682-feff-4e4d-93d0-407b265e3c09"/>
+				<textFieldExpression><![CDATA[$F{completenessScoreByGroupTutor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="487" width="91" height="44" uuid="b80922da-4c05-4cfa-8f07-16252681cbd5"/>
+				<textFieldExpression><![CDATA[$F{replyScoreByGroupTutor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="487" width="91" height="45" uuid="305f5fef-eefe-4872-a947-476ff4256274"/>
+				<textFieldExpression><![CDATA[$F{correctnessScoreByGroupTutor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>

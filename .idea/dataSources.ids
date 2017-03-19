@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - bysj3@localhost" uuid="3073c5cd-3f4a-421a-9544-1feb57c8b4de">
+    <database-info product="MySQL" version="5.7.13-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="bysj3"/>
+      <table id="2" parent="1" name="attachment"/>
+      <table id="3" parent="1" name="audit"/>
+      <table id="4" parent="1" name="backup"/>
+      <table id="5" parent="1" name="classroom"/>
+      <table id="6" parent="1" name="contrainttable"/>
+      <table id="7" parent="1" name="degree"/>
+      <table id="8" parent="1" name="department"/>
+      <table id="9" parent="1" name="employee"/>
+      <table id="10" parent="1" name="graduateproject"/>
+      <table id="11" parent="1" name="guideday"/>
+      <table id="12" parent="1" name="guiderecord"/>
+      <table id="13" parent="1" name="hibernate_sequences"/>
+      <table id="14" parent="1" name="holidayandvaction"/>
+      <table id="15" parent="1" name="mail"/>
+      <table id="16" parent="1" name="mailaddresses"/>
+      <table id="17" parent="1" name="major"/>
+      <table id="18" parent="1" name="openningreport"/>
+      <table id="19" parent="1" name="opinion"/>
+      <table id="20" parent="1" name="projectfidelity"/>
+      <table id="21" parent="1" name="projectfrome"/>
+      <table id="22" parent="1" name="projecttimespan"/>
+      <table id="23" parent="1" name="projecttype"/>
+      <table id="24" parent="1" name="protitle"/>
+      <table id="25" parent="1" name="provinceexcellentproject"/>
+      <table id="26" parent="1" name="quiz"/>
+      <table id="27" parent="1" name="remarktemplate"/>
+      <table id="28" parent="1" name="remarktemplateitems"/>
+      <table id="29" parent="1" name="remarktemplateitemsoption"/>
+      <table id="30" parent="1" name="replygroup"/>
+      <table id="31" parent="1" name="replygroupmemberscore"/>
+      <table id="32" parent="1" name="resource"/>
+      <table id="33" parent="1" name="role"/>
+      <table id="34" parent="1" name="roleresource"/>
+      <table id="35" parent="1" name="schedule"/>
+      <table id="36" parent="1" name="school"/>
+      <table id="37" parent="1" name="schoolexcellentproject"/>
+      <table id="38" parent="1" name="student"/>
+      <table id="39" parent="1" name="studentclass"/>
+      <table id="40" parent="1" name="supervisionreport"/>
+      <table id="41" parent="1" name="taskdoc"/>
+      <table id="42" parent="1" name="tutorage"/>
+      <table id="43" parent="1" name="tutorasmembertoreplygroup"/>
+      <table id="44" parent="1" name="user"/>
+      <table id="45" parent="1" name="user_role"/>
+      <table id="46" parent="1" name="validity"/>
+      <table id="47" parent="1" name="visitingemployee"/>
+      <column id="48" parent="2" name="categroy">
+        <mandatory>1</mandatory>
+        <data-type>varchar(31)</data-type>
+      </column>
+      <column id="49" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="50" parent="2" name="fileName">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="51" parent="2" name="issuedDate">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="52" parent="2" name="url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="53" parent="2" name="num">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="2" name="remark">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="55" parent="2" name="graduateProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="56" parent="2" name="FK1C9354343D73E7A">
+        <columns>graduateProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="57" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="58" parent="2" name="FK1C9354343D73E7A">
+        <columns>graduateProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="59" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="60" parent="3" name="approve">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="61" parent="3" name="auditDate">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="62" parent="3" name="remark">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="63" parent="3" name="auditor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="64" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="65" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="66" parent="4" name="date">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="67" parent="4" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="68" parent="4" name="fileMD5">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="69" parent="4" name="sqlFile">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="70" parent="4" name="url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="71" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="72" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="73" parent="5" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="74" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="75" parent="6" name="constraintCategory">
+        <mandatory>1</mandatory>
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="76" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="77" parent="6" name="endTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="78" parent="6" name="startTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="79" parent="6" name="defualtApproved">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="80" parent="6" name="department_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="81" parent="6" name="FKA1359900322200DA">
+        <columns>department_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="82" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="83" parent="6" name="FKA1359900322200DA">
+        <columns>department_id</columns>
+        <ref-key>~.department.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="84" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="85" parent="7" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="86" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="87" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="88" parent="8" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="89" parent="8" name="constraintOfApproveOpenningReport_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="90" parent="8" name="constraintOfProposeProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="91" parent="8" name="projectTimeSpan_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="8" name="school_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="93" parent="8" name="FK328E4352975DA59A">
+        <columns>school_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="94" parent="8" name="FK328E43529AFC3F9A">
+        <columns>projectTimeSpan_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="95" parent="8" name="FK328E4352A99A357A">
+        <columns>constraintOfApproveOpenningReport_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="96" parent="8" name="FK328E4352ECB013DA">
+        <columns>constraintOfProposeProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="97" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="98" parent="8" name="FK328E4352975DA59A">
+        <columns>school_id</columns>
+        <ref-key>~.school.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="99" parent="8" name="FK328E43529AFC3F9A">
+        <columns>projectTimeSpan_id</columns>
+        <ref-key>~.projecttimespan.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="100" parent="8" name="FK328E4352A99A357A">
+        <columns>constraintOfApproveOpenningReport_id</columns>
+        <ref-key>~.contrainttable.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="101" parent="8" name="FK328E4352ECB013DA">
+        <columns>constraintOfProposeProject_id</columns>
+        <ref-key>~.contrainttable.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="102" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="103" parent="9" name="email">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="104" parent="9" name="moblie">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="105" parent="9" name="qq">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="106" parent="9" name="zipCode">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="107" parent="9" name="name">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="108" parent="9" name="no">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="109" parent="9" name="sex">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="110" parent="9" name="version">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="111" parent="9" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="112" parent="9" name="signPictureURL">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="113" parent="9" name="degree_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="114" parent="9" name="department_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="115" parent="9" name="proTitle_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="116" parent="9" name="FK3C2B9D5D615CA3A69997364722e6ae">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="117" parent="9" name="FK6999736322200DA4722e6ae">
+        <columns>department_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="118" parent="9" name="FK69997366D48C69A4722e6ae">
+        <columns>degree_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="119" parent="9" name="FK69997369AB2AA1A4722e6ae">
+        <columns>proTitle_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="120" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="121" parent="9" name="FK3C2B9D5D615CA3A69997364722e6ae">
+        <columns>user_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="122" parent="9" name="FK6999736322200DA4722e6ae">
+        <columns>department_id</columns>
+        <ref-key>~.department.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="123" parent="9" name="FK69997366D48C69A4722e6ae">
+        <columns>degree_id</columns>
+        <ref-key>~.degree.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="124" parent="9" name="FK69997369AB2AA1A4722e6ae">
+        <columns>proTitle_id</columns>
+        <ref-key>~.protitle.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="125" parent="10" name="graduateProjectCategory">
+        <mandatory>1</mandatory>
+        <data-type>varchar(31)</data-type>
+      </column>
+      <column id="126" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="127" parent="10" name="basicRequirement">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="128" parent="10" name="basicSkill">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="129" parent="10" name="category">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="130" parent="10" name="completenessScoreByGroup">
+        <data-type>double(5,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="131" parent="10" name="correctnessScore">
+        <data-type>double(5,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="132" parent="10" name="qualifiedByGroup">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="133" parent="10" name="qualityScoreByGroup">
+        <data-type>double(5,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="134" parent="10" name="remarkByGroup">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="135" parent="10" name="replyScoreByGroup">
+        <data-type>double(5,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="136" parent="10" name="submittedByGroup">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="137" parent="10" name="submittedDateByGroup">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="138" parent="10" name="achievementScoreByReviewer">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="139" parent="10" name="qualifiedByReviewer">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="140" parent="10" name="qualityScoreByReviewer">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="10" name="remarkByReviewer">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="142" parent="10" name="reviewerEvaluationDiagramQuality">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="143" parent="10" name="reviewerEvaluationDifficulty">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="144" parent="10" name="reviewerEvaluationPrintingQuality">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="145" parent="10" name="reviewerEvaluationProductQuality">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="146" parent="10" name="reviewerEvaluationWordload">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="147" parent="10" name="submittedByReviewer">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="148" parent="10" name="submittedDateByReviewer">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="149" parent="10" name="achievementLevelScoreByTutor">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="150" parent="10" name="basicAblityScoreByTutor">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="151" parent="10" name="qualifiedByTutor">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="152" parent="10" name="remarkByTutor">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="153" parent="10" name="submittedByTutor">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="154" parent="10" name="submittedDateByTutor">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="155" parent="10" name="tutorEvaluteAttendance">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="156" parent="10" name="tutorEvaluteDissertationWordCount">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="157" parent="10" name="tutorEvaluteHasCompleteProject">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="158" parent="10" name="tutorEvaluteHasMiddleExam">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="159" parent="10" name="tutorEvaluteHasSoftHardWare">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="160" parent="10" name="tutorEvaluteHasTranslationMaterail">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="161" parent="10" name="tutorEvaluteHasTranslationWordCount">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="162" parent="10" name="tutorEvaluteHasTwoAbstract">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="163" parent="10" name="workAblityScoreByTutor">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="164" parent="10" name="workLoadScoreByTutor">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="165" parent="10" name="content">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="166" parent="10" name="finalDraft">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="167" parent="10" name="proposerSubmitForApproval">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="168" parent="10" name="recommended">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="169" parent="10" name="reference">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="170" parent="10" name="subTitle">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="171" parent="10" name="title">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="172" parent="10" name="totalScore">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="173" parent="10" name="version">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="174" parent="10" name="year">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="175" parent="10" name="auditByDirector_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="176" parent="10" name="auditByReviewer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="177" parent="10" name="auditByTutor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="178" parent="10" name="groupLeader_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="179" parent="10" name="tutorCommenter_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="180" parent="10" name="guideDay_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="181" parent="10" name="mainTutorage_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="182" parent="10" name="major_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="183" parent="10" name="projectFidelity_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="184" parent="10" name="projectFrom_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="185" parent="10" name="projectType_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="186" parent="10" name="proposer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="187" parent="10" name="replyGroup_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="188" parent="10" name="reviewer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="189" parent="10" name="student_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="190" parent="10" name="totalScoreAuditByChairman_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="191" parent="10" name="openningReport_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="192" parent="10" name="FKF9A3C32E34FB0177">
+        <columns>auditByDirector_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="193" parent="10" name="FKF9A3C32E3A36B77A">
+        <columns>student_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="194" parent="10" name="FKF9A3C32E42C8E5FA">
+        <columns>guideDay_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="195" parent="10" name="FKF9A3C32E49375DDA">
+        <columns>replyGroup_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="196" parent="10" name="FKF9A3C32E544F91A">
+        <columns>projectFidelity_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="197" parent="10" name="FKF9A3C32E6533949A">
+        <columns>projectType_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="198" parent="10" name="FKF9A3C32E74997E9A">
+        <columns>projectFrom_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="199" parent="10" name="FKF9A3C32E7FD556FA">
+        <columns>mainTutorage_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="200" parent="10" name="FKF9A3C32EB08F49B1">
+        <columns>auditByTutor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="201" parent="10" name="FKF9A3C32ED072DA3C">
+        <columns>totalScoreAuditByChairman_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="202" parent="10" name="FKF9A3C32EE74B885E">
+        <columns>auditByReviewer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="203" parent="10" name="FKF9A3C32EFA0940FA">
+        <columns>openningReport_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="204" parent="10" name="FKF9A3C32EFD5786BA">
+        <columns>major_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="205" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="206" parent="10" name="FKF9A3C32E34FB0177">
+        <columns>auditByDirector_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="207" parent="10" name="FKF9A3C32E3A36B77A">
+        <columns>student_id</columns>
+        <ref-key>~.student.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="208" parent="10" name="FKF9A3C32E42C8E5FA">
+        <columns>guideDay_id</columns>
+        <ref-key>~.guideday.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="209" parent="10" name="FKF9A3C32E49375DDA">
+        <columns>replyGroup_id</columns>
+        <ref-key>~.replygroup.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="210" parent="10" name="FKF9A3C32E544F91A">
+        <columns>projectFidelity_id</columns>
+        <ref-key>~.projectfidelity.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="211" parent="10" name="FKF9A3C32E6533949A">
+        <columns>projectType_id</columns>
+        <ref-key>~.projecttype.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="212" parent="10" name="FKF9A3C32E74997E9A">
+        <columns>projectFrom_id</columns>
+        <ref-key>~.projectfrome.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="213" parent="10" name="FKF9A3C32E7FD556FA">
+        <columns>mainTutorage_id</columns>
+        <ref-key>~.tutorage.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="214" parent="10" name="FKF9A3C32EB08F49B1">
+        <columns>auditByTutor_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="215" parent="10" name="FKF9A3C32ED072DA3C">
+        <columns>totalScoreAuditByChairman_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="216" parent="10" name="FKF9A3C32EE74B885E">
+        <columns>auditByReviewer_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="217" parent="10" name="FKF9A3C32EFA0940FA">
+        <columns>openningReport_id</columns>
+        <ref-key>~.openningreport.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="218" parent="10" name="FKF9A3C32EFD5786BA">
+        <columns>major_id</columns>
+        <ref-key>~.major.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="219" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="220" parent="11" name="first">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="221" parent="11" name="fourth">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="222" parent="11" name="second">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="223" parent="11" name="third">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="224" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="225" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="226" parent="12" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="227" parent="12" name="submittedByStudent">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="228" parent="12" name="time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="229" parent="12" name="auditedByTutor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="230" parent="12" name="classRoom_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="231" parent="12" name="graduateProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="232" parent="12" name="FK621C666D43D73E7A">
+        <columns>graduateProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="233" parent="12" name="FK621C666D4AE240D0">
+        <columns>auditedByTutor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="234" parent="12" name="FK621C666DEEB52C9A">
+        <columns>classRoom_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="235" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="236" parent="12" name="FK621C666D43D73E7A">
+        <columns>graduateProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="237" parent="12" name="FK621C666D4AE240D0">
+        <columns>auditedByTutor_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="238" parent="12" name="FK621C666DEEB52C9A">
+        <columns>classRoom_id</columns>
+        <ref-key>~.classroom.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="239" parent="13" name="sequence_name">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="240" parent="13" name="sequence_next_hi_value">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="241" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="242" parent="14" name="beginTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="243" parent="14" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="244" parent="14" name="endTime">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="245" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="246" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="247" parent="15" name="Content">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="248" parent="15" name="addressTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="249" parent="15" name="title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="250" parent="15" name="version">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="251" parent="15" name="addressor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="252" parent="15" name="attachment_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="253" parent="15" name="parentMail_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="254" parent="15" name="FK3305B7CA4236D0">
+        <columns>parentMail_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="255" parent="15" name="FK3305B7F76CE33A">
+        <columns>attachment_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="256" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="257" parent="15" name="FK3305B7CA4236D0">
+        <columns>parentMail_id</columns>
+        <ref-key>PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="258" parent="15" name="FK3305B7F76CE33A">
+        <columns>attachment_id</columns>
+        <ref-key>~.attachment.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="259" parent="16" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="260" parent="16" name="isRead">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="261" parent="16" name="addressee_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="262" parent="16" name="mail_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="263" parent="16" name="FK447513AB105E72BA">
+        <columns>mail_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="264" parent="16" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="265" parent="16" name="FK447513AB105E72BA">
+        <columns>mail_id</columns>
+        <ref-key>~.mail.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="266" parent="17" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="267" parent="17" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="268" parent="17" name="no">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="269" parent="17" name="department_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="270" parent="17" name="validity_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="271" parent="17" name="FK62DB5B9322200DA">
+        <columns>department_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="272" parent="17" name="FK62DB5B978ED8CDA">
+        <columns>validity_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="273" parent="17" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="274" parent="17" name="FK62DB5B9322200DA">
+        <columns>department_id</columns>
+        <ref-key>~.department.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="275" parent="17" name="FK62DB5B978ED8CDA">
+        <columns>validity_id</columns>
+        <ref-key>~.validity.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="276" parent="18" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="277" parent="18" name="submittedByStudent">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="278" parent="18" name="url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="279" parent="18" name="auditByDepartmentDirector_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="280" parent="18" name="auditByTutor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="281" parent="18" name="paperProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="282" parent="18" name="FK908CD4D227CB02DA">
+        <columns>paperProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="283" parent="18" name="FK908CD4D267358D65">
+        <columns>auditByDepartmentDirector_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="284" parent="18" name="FK908CD4D2B08F49B1">
+        <columns>auditByTutor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="285" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="286" parent="18" name="FK908CD4D227CB02DA">
+        <columns>paperProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="287" parent="18" name="FK908CD4D267358D65">
+        <columns>auditByDepartmentDirector_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="288" parent="18" name="FK908CD4D2B08F49B1">
+        <columns>auditByTutor_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="289" parent="19" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="290" parent="19" name="content">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="291" parent="19" name="issueDate">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="292" parent="19" name="url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="293" parent="19" name="issuer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="294" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="295" parent="20" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="296" parent="20" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="297" parent="20" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="298" parent="21" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="299" parent="21" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="300" parent="21" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="301" parent="22" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="302" parent="22" name="beginTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="303" parent="22" name="endTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="304" parent="22" name="year">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="305" parent="22" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="306" parent="23" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="307" parent="23" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="308" parent="23" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="309" parent="24" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="310" parent="24" name="description">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="311" parent="24" name="no">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="312" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="313" parent="25" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="314" parent="25" name="graduateProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="315" parent="25" name="FK8B88A95343D73E7A">
+        <columns>graduateProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="316" parent="25" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="317" parent="25" name="FK8B88A95343D73E7A">
+        <columns>graduateProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="318" parent="26" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="319" parent="26" name="question">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="320" parent="26" name="remark">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="321" parent="26" name="graduateProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="322" parent="26" name="FK35225543D73E7A">
+        <columns>graduateProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="323" parent="26" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="324" parent="26" name="FK35225543D73E7A">
+        <columns>graduateProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="325" parent="27" name="category">
+        <mandatory>1</mandatory>
+        <data-type>varchar(31)</data-type>
+      </column>
+      <column id="326" parent="27" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="327" parent="27" name="defaultRemarkTemplate">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="328" parent="27" name="title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="329" parent="27" name="builder_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="330" parent="27" name="department_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="331" parent="27" name="FK9A6B403A322200DA">
+        <columns>department_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="332" parent="27" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="333" parent="27" name="FK9A6B403A322200DA">
+        <columns>department_id</columns>
+        <ref-key>~.department.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="334" parent="28" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="335" parent="28" name="itemIndex">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="336" parent="28" name="postText">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="337" parent="28" name="preText">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="338" parent="28" name="remarkTemplate_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="339" parent="28" name="FK831D03C6DB1A13FA">
+        <columns>remarkTemplate_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="340" parent="28" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="341" parent="28" name="FK831D03C6DB1A13FA">
+        <columns>remarkTemplate_id</columns>
+        <ref-key>~.remarktemplate.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="342" parent="29" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="343" parent="29" name="itemOption">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="344" parent="29" name="no">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="345" parent="29" name="remarkTemplateItems_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="346" parent="29" name="FK23500BDB7CAB2F5A">
+        <columns>remarkTemplateItems_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="347" parent="29" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="348" parent="29" name="FK23500BDB7CAB2F5A">
+        <columns>remarkTemplateItems_id</columns>
+        <ref-key>~.remarktemplateitems.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="349" parent="30" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="350" parent="30" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="351" parent="30" name="num">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="352" parent="30" name="EndTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="353" parent="30" name="beginTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="354" parent="30" name="version">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="355" parent="30" name="classRoom_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="356" parent="30" name="department_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="357" parent="30" name="leader_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="358" parent="30" name="FKDDF135B5322200DA">
+        <columns>department_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="359" parent="30" name="FKDDF135B5EEB52C9A">
+        <columns>classRoom_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="360" parent="30" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="361" parent="30" name="FKDDF135B5322200DA">
+        <columns>department_id</columns>
+        <ref-key>~.department.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="362" parent="30" name="FKDDF135B5EEB52C9A">
+        <columns>classRoom_id</columns>
+        <ref-key>~.classroom.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="363" parent="31" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="364" parent="31" name="completenessScoreByGroupTutor">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="365" parent="31" name="correctnessScoreByGroupTutor">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="366" parent="31" name="graduateProjectId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="367" parent="31" name="in_dex">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="368" parent="31" name="qualityScoreByGroupTutor">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="369" parent="31" name="questionByTutor_1">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="370" parent="31" name="questionByTutor_2">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="371" parent="31" name="questionByTutor_3">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="372" parent="31" name="remarkByGroupTutor">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="373" parent="31" name="replyGroupId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="374" parent="31" name="replyScoreByGroupTutor">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="375" parent="31" name="responseRemarkByTutor_1">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="376" parent="31" name="responseRemarkByTutor_2">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="377" parent="31" name="responseRemarkByTutor_3">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="378" parent="31" name="studentId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="379" parent="31" name="studentResponse_1">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="380" parent="31" name="studentResponse_2">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="381" parent="31" name="studentResponse_3">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="382" parent="31" name="commentByGroupSubmittedByTutor">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="383" parent="31" name="commentFromGroupSubmittedDate">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="384" parent="31" name="tutorId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="385" parent="31" name="graduateProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="386" parent="31" name="replyGroup_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="387" parent="31" name="tutor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="388" parent="31" name="replyGroupMemberScore_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="389" parent="31" name="FK9E7D932343D73E7A">
+        <columns>graduateProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="390" parent="31" name="FK9E7D932348A94DAC">
+        <columns>replyGroupMemberScore_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="391" parent="31" name="FK9E7D932349375DDA">
+        <columns>replyGroup_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="392" parent="31" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="393" parent="31" name="FK9E7D932343D73E7A">
+        <columns>graduateProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="394" parent="31" name="FK9E7D932348A94DAC">
+        <columns>replyGroupMemberScore_id</columns>
+        <ref-key>~.replygroup.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="395" parent="31" name="FK9E7D932349375DDA">
+        <columns>replyGroup_id</columns>
+        <ref-key>~.replygroup.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="396" parent="32" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="397" parent="32" name="description">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="398" parent="32" name="no">
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="399" parent="32" name="rel">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="400" parent="32" name="url">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="401" parent="32" name="parent_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="402" parent="32" name="FKEBABC40E7787353E">
+        <columns>parent_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="403" parent="32" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="404" parent="32" name="FKEBABC40E7787353E">
+        <columns>parent_id</columns>
+        <ref-key>PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="405" parent="33" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="406" parent="33" name="description">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="407" parent="33" name="no">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="408" parent="33" name="roleName">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="409" parent="33" name="roleHandler_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="410" parent="33" name="FK358076521DB3FC">
+        <columns>roleHandler_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="411" parent="33" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="412" parent="33" name="FK358076521DB3FC">
+        <columns>roleHandler_id</columns>
+        <ref-key>PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="413" parent="34" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="414" parent="34" name="resource_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="415" parent="34" name="role_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="416" parent="34" name="FK75EC6E8430EB065A">
+        <columns>role_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="417" parent="34" name="FK75EC6E8445B60F5A">
+        <columns>resource_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="418" parent="34" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="419" parent="34" name="FK75EC6E8430EB065A">
+        <columns>role_id</columns>
+        <ref-key>~.role.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="420" parent="34" name="FK75EC6E8445B60F5A">
+        <columns>resource_id</columns>
+        <ref-key>~.resource.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="421" parent="35" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="422" parent="35" name="beginTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="423" parent="35" name="content">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="424" parent="35" name="endTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="425" parent="35" name="audit_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="426" parent="35" name="graduateProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="427" parent="35" name="FKD666929735953B7A">
+        <columns>audit_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="428" parent="35" name="FKD666929743D73E7A">
+        <columns>graduateProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="429" parent="35" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="430" parent="35" name="FKD666929735953B7A">
+        <columns>audit_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="431" parent="35" name="FKD666929743D73E7A">
+        <columns>graduateProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="432" parent="36" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="433" parent="36" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="434" parent="36" name="no">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="435" parent="36" name="chairman_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="436" parent="36" name="dean_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="437" parent="36" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="438" parent="37" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="439" parent="37" name="recommended">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="440" parent="37" name="graduateProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="441" parent="37" name="FKBD04D19743D73E7A">
+        <columns>graduateProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="442" parent="37" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="443" parent="37" name="FKBD04D19743D73E7A">
+        <columns>graduateProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="444" parent="38" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="445" parent="38" name="email">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="446" parent="38" name="moblie">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="447" parent="38" name="qq">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="448" parent="38" name="zipCode">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="449" parent="38" name="name">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="450" parent="38" name="no">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="451" parent="38" name="sex">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="452" parent="38" name="version">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="453" parent="38" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="454" parent="38" name="replyGroup_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="455" parent="38" name="studentClass_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="456" parent="38" name="tutor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="457" parent="38" name="FK3C2B9D5D615CA3A8ffe823b">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="458" parent="38" name="FK8FFE823B1218C0DA">
+        <columns>studentClass_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="459" parent="38" name="FK8FFE823B49375DDA">
+        <columns>replyGroup_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="460" parent="38" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="461" parent="38" name="FK3C2B9D5D615CA3A8ffe823b">
+        <columns>user_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="462" parent="38" name="FK8FFE823B1218C0DA">
+        <columns>studentClass_id</columns>
+        <ref-key>~.studentclass.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="463" parent="38" name="FK8FFE823B49375DDA">
+        <columns>replyGroup_id</columns>
+        <ref-key>~.replygroup.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="464" parent="39" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="465" parent="39" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="466" parent="39" name="no">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="467" parent="39" name="major_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="468" parent="39" name="FKFD5363FDFD5786BA">
+        <columns>major_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="469" parent="39" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="470" parent="39" name="FKFD5363FDFD5786BA">
+        <columns>major_id</columns>
+        <ref-key>~.major.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="471" parent="40" name="superviseReportRank">
+        <mandatory>1</mandatory>
+        <data-type>varchar(31)</data-type>
+      </column>
+      <column id="472" parent="40" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="473" parent="40" name="calendar">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="474" parent="40" name="url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="475" parent="40" name="tutor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="476" parent="40" name="school_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="477" parent="40" name="FK63955E17975DA59A">
+        <columns>school_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="478" parent="40" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="479" parent="40" name="FK63955E17975DA59A">
+        <columns>school_id</columns>
+        <ref-key>~.school.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="480" parent="41" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="481" parent="41" name="url">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="482" parent="41" name="auditByBean_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="483" parent="41" name="auditByDepartmentDirector_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="484" parent="41" name="auditByTutor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="485" parent="41" name="graduateProject_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="486" parent="41" name="FKA45F2D73247375D3">
+        <columns>auditByBean_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="487" parent="41" name="FKA45F2D7343D73E7A">
+        <columns>graduateProject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="488" parent="41" name="FKA45F2D7367358D65">
+        <columns>auditByDepartmentDirector_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="489" parent="41" name="FKA45F2D73B08F49B1">
+        <columns>auditByTutor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="490" parent="41" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="491" parent="41" name="FKA45F2D73247375D3">
+        <columns>auditByBean_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="492" parent="41" name="FKA45F2D7343D73E7A">
+        <columns>graduateProject_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="493" parent="41" name="FKA45F2D7367358D65">
+        <columns>auditByDepartmentDirector_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="494" parent="41" name="FKA45F2D73B08F49B1">
+        <columns>auditByTutor_id</columns>
+        <ref-key>~.audit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="495" parent="42" name="tutorage">
+        <mandatory>1</mandatory>
+        <data-type>varchar(31)</data-type>
+      </column>
+      <column id="496" parent="42" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="497" parent="42" name="graduateProjectForCoTutorage_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="498" parent="42" name="tutor_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="499" parent="42" name="graduateProjectForMail_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="500" parent="42" name="FKF5F72297D5B4C96">
+        <columns>graduateProjectForMail_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="501" parent="42" name="FKF5F7229F83A2B58">
+        <columns>graduateProjectForCoTutorage_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="502" parent="42" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="503" parent="42" name="FKF5F72297D5B4C96">
+        <columns>graduateProjectForMail_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="504" parent="42" name="FKF5F7229F83A2B58">
+        <columns>graduateProjectForCoTutorage_id</columns>
+        <ref-key>~.graduateproject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="505" parent="43" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="506" parent="43" name="member_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="507" parent="43" name="replyGroup_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="508" parent="43" name="FKF5DD3E7249375DDA">
+        <columns>replyGroup_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="509" parent="43" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="510" parent="43" name="FKF5DD3E7249375DDA">
+        <columns>replyGroup_id</columns>
+        <ref-key>~.replygroup.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="511" parent="44" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="512" parent="44" name="constraintOfLogin">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="513" parent="44" name="lastLoginIp">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="514" parent="44" name="lastLoginTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="515" parent="44" name="loginTime">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="516" parent="44" name="password">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="517" parent="44" name="username">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="518" parent="44" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="519" parent="45" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="520" parent="45" name="qualified">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="521" parent="45" name="role_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="522" parent="45" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="523" parent="45" name="FK143BF46A30EB065A">
+        <columns>role_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="524" parent="45" name="FK143BF46AD615CA3A">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="525" parent="45" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="526" parent="45" name="FK143BF46A30EB065A">
+        <columns>role_id</columns>
+        <ref-key>~.role.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="527" parent="45" name="FK143BF46AD615CA3A">
+        <columns>user_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="528" parent="46" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="529" parent="46" name="beginTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="530" parent="46" name="endTime">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="531" parent="46" name="roleReource_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="532" parent="46" name="FKAB493732B9EE579">
+        <columns>roleReource_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="533" parent="46" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="534" parent="46" name="FKAB493732B9EE579">
+        <columns>roleReource_id</columns>
+        <ref-key>~.roleresource.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="535" parent="47" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="536" parent="47" name="email">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="537" parent="47" name="moblie">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="538" parent="47" name="qq">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="539" parent="47" name="zipCode">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="540" parent="47" name="name">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="541" parent="47" name="no">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="542" parent="47" name="sex">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="543" parent="47" name="version">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="544" parent="47" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="545" parent="47" name="signPictureURL">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="546" parent="47" name="degree_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="547" parent="47" name="department_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="548" parent="47" name="proTitle_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="549" parent="47" name="company">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="550" parent="47" name="experience">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="551" parent="47" name="foreignLanguage">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="552" parent="47" name="graduateFrom">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="553" parent="47" name="plan">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="554" parent="47" name="speciality">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <index id="555" parent="47" name="FK3C2B9D5D615CA3A699973696fae685">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="556" parent="47" name="FK6999736322200DA96fae685">
+        <columns>department_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="557" parent="47" name="FK69997366D48C69A96fae685">
+        <columns>degree_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="558" parent="47" name="FK69997369AB2AA1A96fae685">
+        <columns>proTitle_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="559" parent="47" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="560" parent="47" name="FK3C2B9D5D615CA3A699973696fae685">
+        <columns>user_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="561" parent="47" name="FK6999736322200DA96fae685">
+        <columns>department_id</columns>
+        <ref-key>~.department.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="562" parent="47" name="FK69997366D48C69A96fae685">
+        <columns>degree_id</columns>
+        <ref-key>~.degree.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="563" parent="47" name="FK69997369AB2AA1A96fae685">
+        <columns>proTitle_id</columns>
+        <ref-key>~.protitle.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>
