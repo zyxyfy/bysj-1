@@ -312,7 +312,9 @@ public class CommonHelper {
         } catch (Exception e) {
             e.getMessage();
         } finally {
-            out.close();
+            if (out != null) {
+                out.close();
+            }
         }
     }
     

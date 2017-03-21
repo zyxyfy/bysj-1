@@ -1,6 +1,5 @@
 package com.newview.bysj.security.login;
 
-import com.google.code.kaptcha.Constants;
 import com.newview.bysj.domain.User;
 import com.newview.bysj.helper.CommonHelper;
 import com.newview.bysj.service.UserService;
@@ -35,11 +34,11 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
             throw new AuthenticationServiceException("提交的方式不支持" + request.getMethod());
         HttpSession httpSession = request.getSession();
         //正确的验证码
-        String correctIdentifyingCode = (String) httpSession.getAttribute(Constants.KAPTCHA_SESSION_KEY);
+        //String correctIdentifyingCode = (String) httpSession.getAttribute(Constants.KAPTCHA_SESSION_KEY);
         //用户输入的验证码
-        String inputIdentifyingCode = request.getParameter("identifyingCode");
-        if (inputIdentifyingCode == null || !inputIdentifyingCode.equals(correctIdentifyingCode))
-            throw new AuthenticationServiceException("验证码输入错误");
+        //String inputIdentifyingCode = request.getParameter("identifyingCode");
+        /*if (inputIdentifyingCode == null || !inputIdentifyingCode.equals(correctIdentifyingCode))
+            throw new AuthenticationServiceException("验证码输入错误");*/
         //获取输入的用户名和密码
         String username = request.getParameter("username");
         String password = request.getParameter("password");

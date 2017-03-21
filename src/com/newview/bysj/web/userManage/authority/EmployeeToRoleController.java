@@ -1,22 +1,19 @@
 package com.newview.bysj.web.userManage.authority;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.apache.log4j.Logger;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.newview.bysj.domain.Employee;
 import com.newview.bysj.domain.Role;
 import com.newview.bysj.domain.UserRole;
 import com.newview.bysj.helper.CommonHelper;
 import com.newview.bysj.web.baseController.BaseController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class EmployeeToRoleController extends BaseController {
