@@ -156,6 +156,16 @@
                 t.tabs('add', opts);
             }
         }
+
+        function changBackgroundWhite(id1,id2) {
+            $("#"+id1).css("background-color", "white");
+            $("#"+id2).css("background-color", "white");
+        }
+
+        function changBackgroundGrey(id1,id2) {
+            $("#"+id1).css("background-color", "lightgrey");
+            $("#"+id2).css("background-color", "lightgrey");
+        }
     </script>
 
 </head>
@@ -165,13 +175,13 @@
 <div class="easyui-layout" data-options="fit:true" style="width: 100%;height: 100%;">
     <%--顶部导航栏--%>
     <div data-options="region:'north',"
-         style="height:14%;background:url(<%=basePath%>img/banner3.png) no-repeat right #337ab7">
+         style="height:14%;background:url(<%=basePath%>img/banner3.png) no-repeat right #337ab7;overflow: hidden">
         <div style="float: left;width: 40%;">
             <span style="color: whitesmoke;font-size: xx-large;margin-left: 20%;line-height: 300%;height: 100%">毕业论文管理系统</span>
             
         </div>
-        <div style="float: right;margin-right: 20px">
-            <ul class="list-inline" style="font-size: 15px;margin-top: 9%">
+        <div style="float: right;margin-right: 20px;">
+            <ul class="list-inline" style="font-size: 15px;margin-top: 13%">
                 <li>
                     <a href="javascript:void(0)">
                      <span style="color: whitesmoke;">
@@ -196,13 +206,6 @@
                     </li>
                 </sec:authorize>
                 <li>
-                    <a href="javascript:void(0)">
-                        <span style="color: whitesmoke;">
-                        <i class="icon-building"></i> 登录次数：${user.loginTime}次
-                        </span>
-                    </a>
-                </li>
-                <li>
                     <a onclick="logout()" href="javascript:void(0)">
                     <span style="color: whitesmoke;">
                         <i class="icon-desktop"></i> 退出
@@ -223,67 +226,71 @@
 
     </div>
     <%--页面左侧菜单栏--%>
-    <div data-options="region:'west',title:'菜单',split:true" style="width:15%;">
-        <ul class="nav nav-pills nav-stacked  navbar-default" id="navb">
-            <!-- 全部的导航栏就这一个foreach，,你需要在这里更改样式 -->
-            <c:forEach items="${parentResourceList}" var="parentResource">
-                <li><a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapse${parentResource.id }"> <c:choose>
-                    <c:when test="${parentResource.id == 1}">
-                        <span class="glyphicon glyphicon-bell">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 4}">
-                        <span class="glyphicon glyphicon-book">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 12}">
-                        <span class="glyphicon glyphicon-check">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 19}">
-                        <span class="glyphicon glyphicon-pencil">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 27}">
-                        <span class="glyphicon glyphicon-file">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 44}">
-                        <span class="glyphicon glyphicon-user">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 33}">
-                        <span class="glyphicon glyphicon-list-alt">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 53}">
-                        <span class="glyphicon glyphicon-eye-open">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 40}">
-                        <span class="glyphicon glyphicon-list">${parentResource.description}</span>
-                    </c:when>
-                    <c:when test="${parentResource.id == 51}">
-                        <span class="glyphicon glyphicon-stats">${parentResource.description}</span>
-                    </c:when>
-                </c:choose> <i class=" icon-angle-left"
-                               style="font-size: 10px; float: right"></i>
-                </a>
+    <div data-options="region:'west',title:'菜单',split:true" style="width:15%;overflow-x: hidden">
+        <div class="bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav" id="navb" style="margin-top: 0">
+                <!-- 全部的导航栏就这一个foreach，,你需要在这里更改样式 -->
+                <c:forEach items="${parentResourceList}" var="parentResource">
+                    <li><a data-toggle="collapse" data-parent="#accordion" 
+                           style="color: dodgerblue;background-color:ghostwhite;width: 80%;font-size: medium"
+                           href="#collapse${parentResource.id }"> <c:choose>
+                        <c:when test="${parentResource.id == 1}">
+                            <span class="glyphicon glyphicon-bell">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 4}">
+                            <span class="glyphicon glyphicon-book">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 12}">
+                            <span class="glyphicon glyphicon-check">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 19}">
+                            <span class="glyphicon glyphicon-pencil">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 27}">
+                            <span class="glyphicon glyphicon-file">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 44}">
+                            <span class="glyphicon glyphicon-user">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 33}">
+                            <span class="glyphicon glyphicon-list-alt">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 53}">
+                            <span class="glyphicon glyphicon-eye-open">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 40}">
+                            <span class="glyphicon glyphicon-list">${parentResource.description}</span>
+                        </c:when>
+                        <c:when test="${parentResource.id == 51}">
+                            <span class="glyphicon glyphicon-stats">${parentResource.description}</span>
+                        </c:when>
+                    </c:choose> <i class=" icon-angle-left"
+                                   style="font-size: 10px; float: right"></i>
+                    </a>
 
-                    <div id="collapse${parentResource.id}" style="background: #2c3b41"
-                         class="panel-collapse collapse">
-                        <c:forEach items="${childResourceList}" var="childResource">
-                            <c:if test="${childResource.parent == parentResource}">
-                                <div class="panel-body">
-                                    <a style="display: none"
-                                       id="childUrl${childResource.id}">${childResource.url}</a>
-                                    <a href="javascript:void(0)"
-                                       onclick="openTab('${childResource.url}','${childResource.description}')"
-                                       id="url${childResource.id}"
-                                       target="navTab" id="pa"
-                                       style="background: #2c3b41;border-left: 3px solid transparent;">
-                                        <i class=" icon-circle-blank "></i>&nbsp&nbsp&nbsp${childResource.description}
-                                    </a>
-                                </div>
-                            </c:if>
-                        </c:forEach>
-                    </div>
-                </li>
-            </c:forEach>
-        </ul>
+                        <div id="collapse${parentResource.id}"
+                             class="panel-collapse collapse">
+                            <c:forEach items="${childResourceList}" var="childResource">
+                                <c:if test="${childResource.parent == parentResource}">
+                                    <div id="div${childResource.id}" onmouseover="changBackgroundGrey('div${childResource.id}','url${childResource.id}')"
+                                         onmouseout="changBackgroundWhite('div${childResource.id}','url${childResource.id}')" class="panel-body" style="padding: 5px;">
+                                        <a style="display: none"
+                                           id="childUrl${childResource.id}">${childResource.url}</a>
+                                        <a href="javascript:void(0)"
+                                           onclick="openTab('${childResource.url}','${childResource.description}')"
+                                           id="url${childResource.id}"
+                                           style="border-left: 3px;background-color: white;color: dodgerblue;font-size: medium ">
+                                            <span style=""></span><i class=" icon-circle-blank "></i>&nbsp&nbsp&nbsp${childResource.description}
+                                        </a>
+                                    </div>
+                                </c:if>
+                            </c:forEach>
+                        </div>
+                    </li>
+                </c:forEach>
+            </ul>
+
+        </div>
     </div>
     <%--页面正文区--%>
     <div data-options="region:'center',fig:true" id="index_tabs" class="easyui-tabs" style="background:#eee;">

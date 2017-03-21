@@ -1,10 +1,13 @@
 package com.newview.bysj.service;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-
+import com.newview.bysj.dao.MajorDao;
+import com.newview.bysj.domain.Department;
+import com.newview.bysj.domain.Major;
+import com.newview.bysj.domain.Tutor;
+import com.newview.bysj.helper.CommonHelper;
+import com.newview.bysj.jpaRepository.MyRepository;
+import com.newview.bysj.myAnnotation.MethodDescription;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -13,17 +16,15 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.newview.bysj.dao.MajorDao;
-import com.newview.bysj.domain.Department;
-import com.newview.bysj.domain.Major;
-import com.newview.bysj.domain.Tutor;
-import com.newview.bysj.helper.CommonHelper;
-import com.newview.bysj.jpaRepository.MyRepository;
-import com.newview.bysj.myAnnotation.MethodDescription;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 
 @Service("majorService")
 public class MajorService extends BasicService<Major, Integer> {
 
+    private static final Logger LOGGER = Logger.getLogger(MajorService.class);
     MajorDao majorDao;
 
     @Override
@@ -48,7 +49,6 @@ public class MajorService extends BasicService<Major, Integer> {
         Major major = majorDao.findOne(new Specification<Major>() {
             @Override
             public Predicate toPredicate(Root<Major> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-                // TODO Auto-generated method stub
                 Predicate condition = cb.equal(root.get("department").as(Department.class), tutor.getDepartment());
                 query.where(condition);
                 return query.getRestriction();
