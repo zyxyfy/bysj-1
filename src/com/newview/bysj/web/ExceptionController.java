@@ -1,6 +1,7 @@
 package com.newview.bysj.web;
 
 import org.apache.log4j.Logger;
+import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,6 +26,10 @@ public class ExceptionController implements HandlerExceptionResolver {
     @Override
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) {
         Map<String, Object> map = new HashMap<>();
+        if(e instanceof AuthenticationServiceException){
+            LOGGER.info("跳转到登录页面");
+            return new ModelAndView("login/login");
+        }
         e.printStackTrace();
         map.put("e", e);
         map.put("detail", e.getStackTrace());
