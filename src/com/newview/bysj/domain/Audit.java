@@ -1,20 +1,12 @@
 package com.newview.bysj.domain;
 
-import java.io.Serializable;
-import java.util.Calendar;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Calendar;
 
 /**
  * 审核类，本类不关联被审核的对象，审核对象单向关联审核类
@@ -46,7 +38,7 @@ public class Audit implements Serializable {
     @JsonIgnore
     private Calendar auditDate;
     /**
-     * 评语，最多80字符
+     * 评语，最多80字符              默认同意！！！！！！！！！！！
      *
      * @generated
      */

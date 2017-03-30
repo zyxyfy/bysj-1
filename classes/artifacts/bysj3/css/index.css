@@ -1,0 +1,124 @@
+@CHARSET "UTF-8";
+
+.content {
+	padding: 20px 10px;
+	margin: 10px 10px;
+}
+
+body {
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+.banner{
+	border-bottom: 4px solid #dd5b26;
+}
+#navigation {
+	height: 60%;
+	 overflow-y: scroll; 
+	overflow-x: hidden;
+	color: rgb(34, 45, 50);
+	background-color: #222d32;
+	/*滚动条测试  */
+	
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-arrow-color: #FFFFFF;
+	scrollbar-face-color: transparent;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-3dlight-color: transparent;
+	scrollbar-darkshadow-color: transparent" 
+		
+}
+/* 滚动条样式*/
+#myTabContent{
+	height: 600px;
+	 overflow-y: scroll; 
+	overflow-x: hidden;
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-arrow-color: #FFFFFF;
+	scrollbar-face-color: transparent;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-3dlight-color: transparent;
+	scrollbar-darkshadow-color: transparent" 
+}
+/* 左侧导航栏样式 ul*/
+
+#navb {
+	background-color: #222d32;
+	color: #b8c7ce;
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+
+#navb a {
+	color: #b8c7ce;
+	background-color: #222d32;
+	border-left: 3px solid transparent;
+	box-sizing: border-box;
+	 cursor:pointer;/*  将光标变成小手*/
+	
+}
+
+#navb a:hover {
+	color: #FFFFFF;
+	background: #1a2226;
+	text-decoration: none;
+	border-left: 3px solid #337ab7;
+}
+
+#navb a:active {
+	color: #FFFFFF;
+	background:#1a2226;
+	text-decoration: none;
+	border-left: 3px solid #337ab7;
+}
+
+/* 右边主页面，包含iframe */
+#page {
+	height: 60%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+/* 页脚*/
+ #footer{
+	width:10px;
+	margin-left:10px;} 
+	
+/* banner内部的上部导航 id=topMeau  class=navbar-custom-menu*/
+ #topMeau {
+	display: block;
+	float: right;
+	padding-right: 20px;
+	font-size: 14px;
+	font-weight: normal;
+	 width: 800px;
+	 
+}
+
+#topMeau a{
+	color: #eee;
+	 position:block;
+	 border-bottom: 4px solid transparent;
+	 line-height:40px;
+	 padding-bottom:8px;
+	  outline:none;/* 去掉点击时出现的虚框  */
+	  cursor:pointer;/*  将光标变成小手*/
+	 
+}
+ #topMeau a:hover{
+	color: #eee; 
+	text-decoration: none;
+	background: transparent;
+	border-bottom: 4px solid #222d32;
+	 
+	
+} 
+ #topMeau a:active{
+	text-decoration: none;
+	
+}  
+  #topMeau a:visited{
+	text-decoration: none;
+	 
+}   

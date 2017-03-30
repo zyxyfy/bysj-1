@@ -118,6 +118,7 @@ public class ReplyGroupsController extends BaseController {
      */
     @RequestMapping(value = "/addReplyGroup", method = RequestMethod.POST)
     public String addReplyGroup(HttpSession httpSession, Integer leaderId, Integer[] studentIds, Integer[] tutorIds, String replyGroupName, HttpServletResponse httpServletResponse) {
+        // TODO: 2017/3/26 此处不当！
         Integer num = replyGroupService.getNum() + 1;
         //获取当前的用户
         Tutor tutor = tutorService.findById(CommonHelper.getCurrentTutor(httpSession).getId());
@@ -129,10 +130,12 @@ public class ReplyGroupsController extends BaseController {
         //设置答辩小组的名称
         replyGroup.setDescription(replyGroupName);
         replyGroup.setLeader(leader);
+        //用于获取保存后的结果
         replyGroup.setNum(num);
         //设置答辩小组的答辩老师名单
         replyGroup.setMembers(this.getTutorById(tutorIds));
         replyGroupService.save(replyGroup);
+        logger.info("======"+replyGroup.getId());
         //重新获取保存后的replyGroup否则更新graduateProject会出错
         replyGroup = replyGroupService.uniqueResult("num", num);
         Role role = roleService.uniqueResult("roleName", "ROLE_REPLYTEAMHEADMAN");

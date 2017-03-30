@@ -43,7 +43,7 @@ ReplyGroup implements Serializable {
     @Embedded
     private ReplyTime replyTime;
     /**
-     * 用来重新获取保存后的答辩小组
+     * 用来获取保存后的答辩小组，因为jpa保存后没有返回对应列的ID
      */
     private Integer num;
     /**

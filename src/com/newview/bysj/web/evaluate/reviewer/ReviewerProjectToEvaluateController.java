@@ -59,9 +59,14 @@ public class ReviewerProjectToEvaluateController extends BaseController {
             condition.put("title", title);
             modelMap.put("title", title);
         }
+        //List<GraduateProject> graduateProjectPage = tutor.getGraduateProjectToReview();
+        Page<GraduateProject> graduateProjectPage = graduateProjectService
+                .getPagesByReviewer(tutor, condition, pageNo, pageSize);
 
-        Page<GraduateProject> graduateProjectPage = graduateProjectService.getPagesByReviewer(tutor, condition, pageNo, pageSize);
-        CommonHelper.pagingHelp(modelMap, graduateProjectPage, "graduateProjectEvaluate", httpServletRequest.getRequestURI(), graduateProjectPage.getTotalElements());
+        CommonHelper.pagingHelp(modelMap, graduateProjectPage,
+                "graduateProjectEvaluate", httpServletRequest.getRequestURI(),
+                graduateProjectPage.getTotalElements());
+
         modelMap.put("actionURL", httpServletRequest.getRequestURI());
         //设置显示模式
         modelMap.put(Constants.EVALUATE_DISP, Constants.REPLY_REVIEWER);

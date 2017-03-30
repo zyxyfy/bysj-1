@@ -1,20 +1,11 @@
 package com.newview.bysj.domain;
 
-import java.io.Serializable;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import javax.persistence.Transient;
-
 import org.codehaus.jackson.annotate.JsonBackReference;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * 开题报告
@@ -51,8 +42,8 @@ public class OpenningReport implements Serializable {
      * @generated
      */
     @OneToOne(cascade = CascadeType.ALL)
-    private Audit auditByTutor;
-    /**
+     private Audit auditByTutor;
+     /**
      * 教研室主任审核
      * 一对一
      *

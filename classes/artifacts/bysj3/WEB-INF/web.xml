@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>bysj3</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 解决懒加载的配置 -->
+	<filter>
+		<filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+    <!--负责启动spring容器的监听器-->
+	<listener>
+    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  	</listener>
+  	<!-- 和spring security 的 session-management有关的监听器，用于监听当前的session -->
+   <listener>
+  	 <listener-class>
+  	 	org.springframework.security.web.session.HttpSessionEventPublisher
+  	 </listener-class>
+   </listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationcontext.xml,classpath:bysj3-security.xml</param-value>
+	</context-param>
+    <!--spring mvc的主控servlet-->
+  <servlet>
+    <servlet-name>bysj3</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value></param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+    <!--servlet拦截的路径-->
+  <servlet-mapping>
+    <servlet-name>bysj3</servlet-name>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>bysj3</servlet-name>
+    <url-pattern>*.json</url-pattern>
+  </servlet-mapping>
+  <!-- ？？？？？？？？？？ -->
+  <filter>
+    <filter-name>openEntityManagerInViewFilter</filter-name>
+    <filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>openEntityManagerInViewFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+   <!-- spring security配置 -->
+  <filter>
+  	<filter-name>springSecurityFilterChain</filter-name>
+  	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>springSecurityFilterChain</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+    <!--编码的过滤器-->
+    <filter>
+        <display-name>EncodingFilter</display-name>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.newview.bysj.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>*.html</url-pattern>
+    </filter-mapping>
+  <!-- webService配置 -->
+    <!--<servlet>
+     <servlet-name>CXFService</servlet-name>
+     <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+     <servlet-name>CXFService</servlet-name>
+     <url-pattern>/CXFWebService/*</url-pattern>
+   </servlet-mapping>-->
+  <!-- 配置log4j -->
+   <context-param>  
+        <param-name>webAppRootKey</param-name>  
+        <param-value>bysj3.root</param-value>  
+    </context-param>
+    <!--指定log4j配置文件的位置-->
+   <context-param>
+      <param-name>log4jConfigLocation</param-name>
+      <param-value>classpath:log4j.properties</param-value>
+   </context-param>
+   <context-param>
+      <param-name>log4jRefreshInterval</param-name>
+      <param-value>6000</param-value>
+   </context-param>
+    <!--用于启动log4j引擎-->
+    <listener>
+      <listener-class>
+        org.springframework.web.util.Log4jConfigListener
+      </listener-class>
+    </listener>
+    <!--用于监听在线的用户数量 -->
+    <listener>
+        <listener-class>com.newview.bysj.listener.OnlineListener</listener-class>
+    </listener>
+</web-app>

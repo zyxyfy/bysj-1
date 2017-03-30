@@ -1,13 +1,9 @@
 package com.newview.bysj.domain;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+
+import javax.persistence.*;
 
 
 /**
@@ -17,6 +13,7 @@ import org.hibernate.annotations.DynamicUpdate;
 @DiscriminatorValue(value = "mainTutorage")
 @DynamicInsert(true)
 @DynamicUpdate(true)
+// TODO: 2017/3/26  转移到graduateproject中，增加一个tutor
 public class MainTutorage extends Tutorage {
 
     /**
